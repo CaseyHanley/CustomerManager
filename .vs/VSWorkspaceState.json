@@ -1,18 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src\\main",
-    "\\src\\main\\java",
-    "\\src\\main\\java\\com",
-    "\\src\\main\\java\\com\\example",
-    "\\src\\main\\java\\com\\example\\hanley",
-    "\\src\\main\\java\\com\\example\\hanley\\CustomerManager",
-    "\\target",
-    "\\target\\classes",
-    "\\target\\classes\\com",
-    "\\target\\classes\\com\\example",
-    "\\target\\classes\\com\\example\\hanley",
-    "\\target\\classes\\com\\example\\hanley\\CustomerManager"
+    "\\WebCustomerApp",
+    "\\WebCustomerApp\\src",
+    "\\WebCustomerApp\\src\\app",
+    "\\WebCustomerApp\\src\\app\\create-customer"
   ],
+  "SelectedNode": "\\WebCustomerApp\\src\\app\\app.module.ts",
   "PreviewInSolutionExplorer": false
 }

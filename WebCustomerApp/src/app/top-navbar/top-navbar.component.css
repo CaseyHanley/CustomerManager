@@ -1,0 +1,19 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  height: 60px;
+  padding: 0 20px;
+  z-index:2;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+  a.active {
+    font-weight: bold;
+  }

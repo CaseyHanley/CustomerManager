@@ -8,14 +8,15 @@ import org.springframework.web.servlet.view.RedirectView;
 import java.util.List;
 
 @RestController
-public class UserController implements UserFactory{
+@CrossOrigin
+public class CustomerController implements CustomerFactory {
 
 
     @Autowired
-    @Resource(name = "userService")
-    private UserService userService;
+    @Resource(name = "customerService")
+    private CustomerService userService;
 
-   @RequestMapping("/")
+   @RequestMapping("/newhome")
    public RedirectView redirect(){
         String newUrl = "http://localhost:4200/home";
         RedirectView redirectView = new RedirectView();
@@ -23,33 +24,36 @@ public class UserController implements UserFactory{
         return redirectView;
     }
 
+
     @GetMapping("/customers")
     @Override
-    public List<UserEntity> getUsers() {
-        return userService.getUsers();
+    public List<CustomerEntity> getCustomers() {
+        return userService.getCustomers();
     }
 
     @GetMapping("/customers/{id}")
     @Override
-    public UserEntity getUserById(int id) {
-        return userService.getUserById(id);
+    public CustomerEntity getCustomerById(int id) {
+        return userService.getCustomerById(id);
     }
 
     @PostMapping("/customers")
     @Override
-    public UserEntity addUser(UserEntity user) {
-        return userService.addUser(user);
+    public CustomerEntity addCustomer(@RequestBody CustomerEntity user) {
+
+       System.out.println(user);
+       return userService.addCustomer(user);
     }
 
     @PutMapping("/customers/{user}")
     @Override
-    public UserEntity updateUser(UserEntity user) {
-        return userService.updateUser(user);
+    public CustomerEntity updateCustomer(CustomerEntity user) {
+        return userService.updateCustomer(user);
     }
 
     @DeleteMapping("/customers/{id}")
     @Override
-    public String DeleteUserById(int id) {
-        return userService.DeleteUserById(id);
+    public String DeleteCustomerById(int id) {
+        return userService.DeleteCustomerById(id);
     }
 }

@@ -2,10 +2,8 @@
   "ExpandedNodes": [
     "",
     "\\WebCustomerApp",
-    "\\WebCustomerApp\\src",
-    "\\WebCustomerApp\\src\\app",
-    "\\WebCustomerApp\\src\\app\\create-customer"
+    "\\WebCustomerApp\\src\\app\\top-navbar"
   ],
-  "SelectedNode": "\\WebCustomerApp\\src\\app\\app.module.ts",
+  "SelectedNode": "\\WebCustomerApp\\proxy.conf.json",
   "PreviewInSolutionExplorer": false
 }

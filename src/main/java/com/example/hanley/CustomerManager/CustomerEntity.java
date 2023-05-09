@@ -2,14 +2,13 @@ package com.example.hanley.CustomerManager;
 
 
 import jakarta.persistence.*;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
-@Table(name = "user")
-public class UserEntity  {
+@Table(name = "customer")
+public class CustomerEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -19,8 +18,39 @@ public class UserEntity  {
     private String lName;
     private String phoneNum;
 
+    public int getId() {
+        return id;
+    }
 
-    @OneToMany(mappedBy = "user")
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getfName() {
+        return fName;
+    }
+
+    public void setfName(String fName) {
+        this.fName = fName;
+    }
+
+    public String getlName() {
+        return lName;
+    }
+
+    public void setlName(String lName) {
+        this.lName = lName;
+    }
+
+    public String getPhoneNum() {
+        return phoneNum;
+    }
+
+    public void setPhoneNum(String phoneNum) {
+        this.phoneNum = phoneNum;
+    }
+
+    @OneToMany(mappedBy = "customer")
    private List<DependentsEntity> dependents;
 
    public List<DependentsEntity> getDependents(){
@@ -41,7 +71,7 @@ public class UserEntity  {
        }
 
        dependents.add(tempDependents);
-       tempDependents.setUser(this);
+       tempDependents.setCustomer(this);
 
    }
 
